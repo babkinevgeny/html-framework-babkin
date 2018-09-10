@@ -12,7 +12,7 @@
     <header>
       <div class="line flex">
         <div class="line__child_xl_3 line__child_lg_6 line__child_md_4 line__child_sm_12">
-          <div class="logo">Some text about company</div>
+          <div class="logo text-left">Some text about company</div>
         </div>
         <div class="line__child_xl_9 line__child_lg_6 line__child_md_8 line__child_sm_12">
           <nav class="navigation">
@@ -36,34 +36,36 @@
           <aside class="articles">
             <div class="info clearfix">
               <div class="info__box pull_left">Floated block</div>
-              <div class="info__text">Some information about events</div>
+              <div class="info__text text-right">Some information about events</div>
             </div>
             <div class="info clearfix">
               <div class="info__box pull_right">Floated block</div>
-              <div class="info__text">Some information about events</div>
+              <div class="info__text text-left">Some information about events</div>
             </div>
             <div class="info clearfix">
               <div class="info__box pull_left">Floated block</div>
-              <div class="info__text">Some information about events</div>
+              <div class="info__text text-right">Some information about events</div>
             </div>
             <div class="info clearfix">
               <div class="info__box pull_right">Floated block</div>
-              <div class="info__text">Some information about events</div>
+              <div class="info__text text-left">Some information about events</div>
             </div>
           </aside>
         </div>
         <div class="line__child_xl_9 line__child_lg_9 line__child_md_12">
           <article>
-            <p><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam facilis aspernatur illum veritatis inventore aliquid id sunt nostrum fugiat! Expedita placeat veniam minus molestiae repudiandae natus sunt tempore repellendus dolorum.</span>
-            <span>Minima delectus ipsum ab. Cupiditate consequatur ea deserunt, itaque laudantium eius eaque voluptatem, possimus a et, inventore consectetur vitae, cumque modi quibusdam atque molestias in? A labore obcaecati tempore, dolor.</span>
-            <span>Fugit tempora reiciendis perferendis porro ut. Neque dignissimos soluta aperiam omnis distinctio commodi impedit dolorem voluptas nobis qui libero, sit, sequi cumque eum perferendis quo cupiditate magni, molestias ad maiores?</span>
-            <span>Nobis esse optio laboriosam porro, pariatur, adipisci, fugit vero tenetur facilis placeat ipsam. Porro quibusdam blanditiis delectus, accusantium voluptatibus beatae nobis illum dolor excepturi, temporibus accusamus a quos atque nostrum.</span>
-            <span>Atque architecto eos, saepe repellendus exercitationem tenetur error vitae quaerat, porro assumenda quas recusandae. Quas, eveniet, debitis sint eaque beatae assumenda maiores alias quidem iste eius veritatis dignissimos voluptatibus maxime.</span>
-            <span>Illo, labore et? Eaque laborum, praesentium. Numquam quam, itaque consectetur modi dolorem harum! Voluptatibus debitis explicabo, et quas optio ad quasi, impedit reiciendis commodi iure, distinctio fugit vero, nemo in.</span  >
-            <span>Incidunt recusandae tenetur quo quae, sequi earum adipisci, voluptatum ad ratione odit rerum quasi dolores amet. Modi accusamus incidunt dolor alias optio, suscipit, dolorum cupiditate ipsa totam, quisquam ut consequuntur?</sp  an>
-            <span>Modi similique corporis iusto necessitatibus laboriosam distinctio quidem, quia facere quae, temporibus vero repellendus ducimus aut. Quos molestiae officiis voluptate nisi voluptatibus. Commodi dolor molestiae, nemo itaque voluptates possimus veniam.</  span>
-            <span>Ducimus deserunt voluptatum fuga, dignissimos aliquam labore voluptatibus tempora assumenda accusantium, odit, earum, sapiente atque ea nihil in. Consequatur accusamus nobis soluta incidunt, id similique unde iure eveniet sapient  e ratione.</span>
-            <span>Debitis tempore placeat earum, nesciunt tempora vel architecto quas nam, impedit deserunt voluptatum in iure voluptatem sequi nisi fuga. Quas earum laborum porro error cupiditate, maxime ipsam nemo magni voluptates!</span></p>
+            <p>Сетка фреймворка состоиз из строки и колонок которые имеются по принципу БЭМ. Главный центровщик имеет класс "wrapper". Строка имеет класс "line". Колонки имеются line__child_(размер колонки xl, lg, md или всегда фиксированный размер)_(кол-во места которое занимает блок от 1 до 12). Например:</p>
+            <p class="code"><br>
+              &lt;div class="line"&gt;<br>
+                  &nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="line_child_xl_6 line_child_lg_9"&gt;&lt;/div&gt;<br>
+                  &nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="line_child_xl_6 line_child_lg_3"&gt;&lt;/div&gt;<br>
+              &lt;/div&gt;<br>
+            </p>
+            <p>Также созданы классы для технологии flex: .flex, .flex-row, .flex-column, .space-between, .x-start, .x-end, .y-center</p>
+            <p>Классы для плавающих элементов: .pull-left, .pull-right.</p>
+            <p>Классы для выравнивания текста: .text-right, .text-left, .text-center.</p>
+            <p>Раздел с демонстрацией работы колонок: в верхней части страницы это header и его потомки; в центральной часть - aside и article.</p>
+            <p>Работа классов flex продемонстрирована в блоке aside.</p>
           </article>
         </div>
       </div>

@@ -46,6 +46,17 @@ body{
 .y-center{
   align-items: center;
 }
+.text{
+  &-center{
+    text-align: center;
+  }
+  &-left{
+    text-align: left;
+  }
+  &-right{
+    text-align: right;
+  }
+}
 .wrapper{
   width: 100%;
   padding: 0 15px;
@@ -376,7 +387,6 @@ body{
 .logo{
   background: #f5f8fa;
   width: 100%;
-  text-align: left;
   height: 100px;
   width: 100%;
   padding: 15px;
@@ -417,6 +427,9 @@ article{
   text-indent: 25px;
   background: #f5f8fa;
   padding: 10px;
+  p{
+    margin: 10px 0;
+  }
 }
 section{
   padding: 15px;
@@ -471,12 +484,6 @@ header{
     font-size: 14px;
     padding: 10px;
   }
-  .pull_left + .info__text{
-    text-align: right;
-  }
-  .pull_right + .info__text{
-    text-align: left;
-  }
   &__text{
     font-size: 14px;
   }
@@ -484,6 +491,11 @@ header{
 
 p{
   margin: 0;
+}
+
+.code{
+  font-family: 'Courier', serif;
+  font-size: 14px;
 }
 
 @media screen and (max-width: 1200px) {
