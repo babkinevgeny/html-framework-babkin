@@ -1,40 +1,7 @@
-/*Maps and variables*/
-
-$columns: 12;
-$breakpoints: (
-
-  xl: 1200px,
-  lg: 992px,
-  md: 768px,
-  sm: 576px,
-  xs: 575px
-
-);
-
-/*Mixins*/
-@mixin respond-to($breakpoint) {
-  @if $breakpoint == xl {
-    @media screen and (min-width: #{map-get($breakpoints, $breakpoint)}) {
-      @content;
-    }
-  } @else if $breakpoint == lg {
-    @media screen and (min-width: #{map-get($breakpoints, $breakpoint)}) and (max-width: #{map-get($breakpoints, xl)-1}) {
-      @content;
-    }
-  } @else if $breakpoint == md {
-    @media screen and (min-width: #{map-get($breakpoints, $breakpoint)}) and (max-width: #{map-get($breakpoints, lg)-1}) {
-      @content;
-    }
-  } @else if $breakpoint == sm {
-    @media screen and (min-width: #{map-get($breakpoints, $breakpoint)}) and (max-width: #{map-get($breakpoints, md)-1}) {
-      @content;
-    }
-  } @else {
-    @media screen and (max-width: #{map-get($breakpoints, xs)}) {
-      @content;
-    }
-  }
-}
+@import '../assets/helpers/_index.scss';
+@import '../assets/global/_index.scss';
+@import '../assets/elements/_index.scss';
+@import '../assets/components/_index.scss';
 
 /*Grid styles*/
 *,
@@ -42,7 +9,7 @@ $breakpoints: (
 *::after {
   box-sizing: border-box;
   border-radius: 3px;
-}
+} 
 body{
   margin: 0;
 }
@@ -51,37 +18,7 @@ body{
   display: table;
   clear: both;
 }
-.pull{
-  &--left{
-    float: left;
-  }
-  &--right{
-    float: right;
-  }
-}
-.flex{
-  display: -webkit-flex;
-  display: -ms-flex;
-  display: flex;
-  &--row{
-    flex-direction: row;
-  }
-  &--column{
-    flex-direction: column;
-  }
-}
-.space-between{
-  justify-content: space-between;
-}
-.x-start{
-  justify-content: flex-start;
-}
-.x-end{
-  justify-content: flex-end;
-}
-.y-center{
-  align-items: center;
-}
+
 .text{
   &--center{
     text-align: center;
@@ -93,54 +30,7 @@ body{
     text-align: right;
   }
 }
-.wrapper{
-  width: 100%;
-  padding: 0 15px;
-  margin: 0 auto;
-  @include respond-to(xl) {
-    max-width: 1140px;
-  }
-  @include respond-to(lg) {
-    max-width: 960px;
-  }
-  @include respond-to(md) {
-    max-width: 720px;
-  }
-  @include respond-to(sm) {
-    max-width: 540px;
-  }
-}
-.parent{
-  width: 100%;
-  flex-wrap: wrap;
-}
 
-.child{
-  @each $breakpoint, $value in $breakpoints {
-    @for $i from 1 to $columns + 1 {
-      &__#{$breakpoint}--#{$i} {
-        width: 100%;
-        min-height: 1px;
-        padding: 0 15px;
-        position: relative;
-        @include respond-to($breakpoint){
-          flex: 0 0 calc(100% / 12 * #{$i});
-          max-width: calc(100% / 12 * #{$i});
-        }
-      }
-    }
-  }
-  @for $i from 1 to $columns + 1 {
-    &--#{$i} {
-      width: 100%;
-      min-height: 1px;
-      padding: 0 15px;
-      position: relative;
-      flex: 0 0 calc(100% / 12 * #{$i});
-      max-width: calc(100% / 12 * #{$i});
-    }
-  }
-}
 
 /*Custom styles*/
 body{

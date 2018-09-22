@@ -1,0 +1,48 @@
+.wrapper{
+  width: 100%;
+  padding: 0 15px;
+  margin: 0 auto;
+  @include respond-to(xl) {
+    max-width: 1140px;
+  }
+  @include respond-to(lg) {
+    max-width: 960px;
+  }
+  @include respond-to(md) {
+    max-width: 720px;
+  }
+  @include respond-to(sm) {
+    max-width: 540px;
+  }
+}
+.parent{
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+.child{
+  @each $breakpoint, $value in $breakpoints {
+    @for $i from 1 to $columns + 1 {
+      &__#{$breakpoint}--#{$i} {
+        width: 100%;
+        min-height: 1px;
+        padding: 0 15px;
+        position: relative;
+        @include respond-to($breakpoint){
+          flex: 0 0 calc(100% / 12 * #{$i});
+          max-width: calc(100% / 12 * #{$i});
+        }
+      }
+    }
+  }
+  @for $i from 1 to $columns + 1 {
+    &--#{$i} {
+      width: 100%;
+      min-height: 1px;
+      padding: 0 15px;
+      position: relative;
+      flex: 0 0 calc(100% / 12 * #{$i});
+      max-width: calc(100% / 12 * #{$i});
+    }
+  }
+}
