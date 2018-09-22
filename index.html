@@ -10,11 +10,11 @@
 <body>
   <div class="wrapper">
     <header>
-      <div class="line flex">
-        <div class="line__child_xl_3 line__child_lg_6 line__child_md_4 line__child_sm_12">
-          <div class="logo text-left">Some text about company</div>
+      <div class="parent flex">
+        <div class="child__xl--3 child__lg--6 child__md--4 child__sm--12">
+          <div class="logo text--left">Some text about company</div>
         </div>
-        <div class="line__child_xl_9 line__child_lg_6 line__child_md_8 line__child_sm_12">
+        <div class="child__xl--9 child__lg--6 child__md--8 child__sm--12">
           <nav class="navigation">
             <ul class="navigation__list flex x-end y-center">
               <li class="navigation__item"><a href="#">Link 1</a></li>
@@ -31,46 +31,45 @@
       </div>
     </header>
     <section>
-      <div class="line flex">
-        <div class="line__child_xl_3 line__child_lg_3 line__child_md_12">
+      <div class="parent flex">
+        <div class="child__xl--3 child__lg--6 child__md--12">
           <aside class="articles">
             <div class="info clearfix">
-              <div class="info__box pull_left">Floated block</div>
-              <div class="info__text text-right">Some information about events</div>
+              <div class="info__box pull--left">Floated block</div>
+              <div class="info__text text--right">Some information about events</div>
             </div>
             <div class="info clearfix">
-              <div class="info__box pull_right">Floated block</div>
-              <div class="info__text text-left">Some information about events</div>
+              <div class="info__box pull--right">Floated block</div>
+              <div class="info__text text--left">Some information about events</div>
             </div>
             <div class="info clearfix">
-              <div class="info__box pull_left">Floated block</div>
-              <div class="info__text text-right">Some information about events</div>
+              <div class="info__box pull--left">Floated block</div>
+              <div class="info__text text--right">Some information about events</div>
             </div>
             <div class="info clearfix">
-              <div class="info__box pull_right">Floated block</div>
-              <div class="info__text text-left">Some information about events</div>
+              <div class="info__box pull--right">Floated block</div>
+              <div class="info__text text--left">Some information about events</div>
             </div>
           </aside>
         </div>
-        <div class="line__child_xl_9 line__child_lg_9 line__child_md_12">
+        <div class="child__xl--9 child__lg--6 child__md--12">
           <article>
-            <p>Сетка фреймворка состоиз из строки и колонок которые имеются по принципу БЭМ. Главный центровщик имеет класс "wrapper". Строка имеет класс "line". Колонки имеются line__child_(размер колонки xl, lg, md или всегда фиксированный размер)_(кол-во места которое занимает блок от 1 до 12). Например:</p>
+            <p>Сетка фреймворка состоит из строки и колонок, которые имеются по принципу БЭМ. Главный центровщик имеет класс "wrapper". Строка имеет класс "parent". Колонки именуются child__(размер колонки xl, lg, md, sm, xs)--(кол-во места которое занимает блок от 1 до 12). Например:</p>
             <p class="code"><br>
-              &lt;div class="line"&gt;<br>
-                  &nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="line__child_xl_6 line__child_lg_9"&gt;&lt;/div&gt;<br>
-                  &nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="line__child_xl_6 line__child_lg_3"&gt;&lt;/div&gt;<br>
+              &lt;div class="parent"&gt;<br>
+                  &nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="child__xl--6 child__lg--9"&gt;&lt;/div&gt;<br>
+                  &nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="child__xl--6 child__lg--3"&gt;&lt;/div&gt;<br>
               &lt;/div&gt;<br>
             </p>
-            <p>Также созданы классы для технологии flex: .flex, .flex-row, .flex-column, .space-between, .x-start, .x-end, .y-center</p>
-            <p>Классы для плавающих элементов: .pull-left, .pull-right.</p>
-            <p>Классы для выравнивания текста: .text-right, .text-left, .text-center.</p>
+            <p>Также созданы классы для технологии flex: .flex, .flex--row, .flex--column, .space-between, .x-start, .x-end, .y-center</p>
+            <p>Классы для плавающих элементов: .pull--left, .pull--right.</p>
+            <p>Классы для выравнивания текста: .text--right, .text--left, .text--center.</p>
             <p>Раздел с демонстрацией работы колонок: в верхней части страницы это header и его потомки; в центральной часть - aside и article.</p>
             <p>Работа классов flex продемонстрирована в блоке aside.</p>
           </article>
         </div>
       </div>
     </section>
-
   </div>
 </body>
 </html>
