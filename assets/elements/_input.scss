@@ -1,6 +1,7 @@
-.textarea{
+.input{
   border: none;
   display: block;
+  height: 45px;
   width: 100%;
   padding: 15px;
   outline: none;
@@ -10,9 +11,16 @@
   box-sizing: border-box;
   margin: 0 0 10px 0;
   text-align: left;
-  font-family: Arial;
-  resize: none;
   margin-bottom: 20px;
+  cursor: pointer;
+  @include respond-to(sm){
+    max-width: inherit;
+    width: 100%;
+  }
+  @include respond-to(xs){
+    max-width: inherit;
+    width: 100%;
+  }
   &:focus{
     border: 1px solid lighten(#06abdd, 20%);
     outline: none;

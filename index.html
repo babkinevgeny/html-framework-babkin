@@ -24,8 +24,8 @@
             </ul>
           </nav>
           <form action="#" class="search flex space-between">
-            <input type="text" placeholder="Type smth">
-            <input type="submit" value="Submit">
+            <input type="text" class="input" placeholder="Type smth">
+            <input type="submit" class="btn btn--primary" value="Submit">
           </form>
         </div>
       </div>
@@ -54,6 +54,7 @@
         </div>
         <div class="child__xl--9 child__lg--6 child__md--12">
           <article>
+            <h2 class="title text--center">Описание фреймворка</h2>
             <p>Сетка фреймворка состоит из строки и колонок, которые имеются по принципу БЭМ. Главный центровщик имеет класс "wrapper". Строка имеет класс "parent". Колонки именуются child__(размер колонки xl, lg, md, sm, xs)--(кол-во места которое занимает блок от 1 до 12). Например:</p>
             <p class="code"><br>
               &lt;div class="parent"&gt;<br>
@@ -66,6 +67,72 @@
             <p>Классы для выравнивания текста: .text--right, .text--left, .text--center.</p>
             <p>Раздел с демонстрацией работы колонок: в верхней части страницы это header и его потомки; в центральной часть - aside и article.</p>
             <p>Работа классов flex продемонстрирована в блоке aside.</p>
+          </article>
+          <article>
+            <h2 class="title text--center">Элементы формы</h2>
+            <form action="">
+              <fieldset class="fieldset fieldset--inputs">
+                <label class="label" for="usual">Usual label</label>
+                <input type="text" id="usual" class="input" placeholder="Обычный input">
+                <input type="text" class="input input--disabled" disabled placeholder="Input disabled">
+                <label class="label label--error" for="error">Error label</label>
+                <input type="text" id="error" class="input input--error" placeholder="Input error">
+                <input type="text" class="input input--readonly" placeholder="Input readonly" readonly>
+              </fieldset>
+              <fieldset class="fieldset fieldset--textareas">
+                <label class="label" for="usual-textarea">Usual label</label>
+                <textarea class="textarea" placeholder="Обычный textarea" id="usual-textarea"></textarea>
+                <textarea class="textarea textarea--disabled" disabled placeholder="Textarea disabled"></textarea>
+                <label class="label label--error" for="error-textarea">Usual label</label>
+                <textarea class="textarea textarea--error" placeholder="Textarea error" id="error-textarea"></textarea>
+                <textarea class="textarea textarea--readonly" placeholder="Textarea readonly" readonly></textarea>
+              </fieldset>
+              <fieldset class="fieldset fieldset--checkboxes">
+                <label for="" class="checkbox">
+                  <input type="checkbox" class="input input--checkbox">
+                  <span class="checkbox__marker"></span>
+                </label>
+                <label for="" class="checkbox">
+                  <input type="checkbox" class="input input--checkbox" checked>
+                  <span class="checkbox__marker"></span>
+                </label>
+                <label for="" class="checkbox checkbox--disabled">
+                  <input type="checkbox" class="input input__checkbox input__checkbox--disabled" disabled>
+                  <span class="checkbox__marker"></span>
+                </label>
+                <label for="" class="checkbox checkbox--error">
+                  <input type="checkbox" class="input input__checkbox input__checkbox--error">
+                  <span class="checkbox__marker"></span>
+                </label>
+              </fieldset>
+              <fieldset class="fieldset fieldset--radio">
+                <label for="" class="radio">
+                  <input type="radio" name="radio" class="input input--radio">
+                  <span class="radio__marker"></span>
+                </label>
+                <label for="" class="radio">
+                  <input type="radio" name="radio" class="input input--radio">
+                  <span class="radio__marker"></span>
+                </label>
+                <label for="" class="radio radio--disabled">
+                  <input type="radio" name="radio" class="input input__radio input__radio--disabled" disabled>
+                  <span class="radio__marker"></span>
+                </label>
+                <label for="" class="radio radio--error">
+                  <input type="radio" name="radio" class="input input__radio input__radio--error">
+                  <span class="radio__marker"></span>
+                </label>
+              </fieldset>
+              <fieldset class="fieldset fieldset--buttons flex space-between">
+                <div class="fieldset__block"><button type="button" class="btn">Normal</button></div>
+                <div class="fieldset__block"><button type="button" class="btn btn--big">Big</button></div>
+                <div class="fieldset__block"><button type="button" class="btn btn--small">Small</button></div>
+                <div class="fieldset__block"><button type="button" class="btn btn--primary">Primary</button></div>
+                <div class="fieldset__block"><button type="button" class="btn btn--secondary">Secondary</button></div>
+                <div class="fieldset__block"><button type="button" class="btn btn--disabled">Disabled</button></div>
+                <div class="fieldset__block"><button type="button" class="btn btn--warning">Warning</button></div>
+              </fieldset>
+            </form>
           </article>
         </div>
       </div>

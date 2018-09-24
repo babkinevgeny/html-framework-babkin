@@ -9,7 +9,7 @@
 *::after {
   box-sizing: border-box;
   border-radius: 3px;
-} 
+}
 body{
   margin: 0;
 }
@@ -108,40 +108,18 @@ header{
 }
 
 .search {
-  input[type="text"]{
-    border: none;
-    height: 45px;
-    width: 80%;
-    padding: 15px;
-    outline: none;
-    background: #f5f8fa;
+  .input{
+    width: 70%;
   }
-  input[type="submit"]{
-    border: none;
-    display: block;
-    width: 18%;
-    height: 45px;
-    padding: 15px;
-    outline: none;
-    background: #06abdd;
-    color: #fff;
-    cursor: pointer;
-    &:hover{
-      background: darken(#06abdd, 5%);
-    }
-    &:active,
-    &:focus{
-      background: darken(#06abdd, 10%);
-    }
+  .btn{
+    width: 28%;
   }
   @include respond-to(xs) {
-    input{
-      &[type="text"]{
-        width: 60%;
-      }
-      &[type="submit"]{
-        width: 38%;
-      }
+    .input{
+      width: 60%;
+    }
+    .btn{
+      width: 38%;
     }
   };
 }

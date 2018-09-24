@@ -1,0 +1,90 @@
+.radio{
+  width: 25px;
+  height: 25px;
+  margin-right: 10px;
+  display: inline-block;
+  float: left;
+  position: relative;
+  input{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 25px;
+    height: 25px;
+    outline:none;
+    cursor: pointer;
+    opacity: 0;
+    z-index: 1;
+    &:checked{
+      & + .radio__marker{
+        background: #06abdd;
+        &:after{
+          display: block;
+        }
+      }
+    }
+  }
+  &__marker{
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: #eceded;
+    display: block;
+    position: relative;
+    cursor: pointer;
+    &:after{
+      content: '';
+      display: none;
+      width: 8px;
+      height: 8px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      margin-left: -4px;
+      margin-top: -4px;
+      background: #fff;
+      border-radius: 50%;
+    }
+  }
+  &--disabled{
+    .radio__marker{
+      background: lighten(#8a8a8a, 30%);
+      &:after{
+        content: '';
+        display: block;
+        width: 8px;
+        height: 8px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-left: -4px;
+        margin-top: -4px;
+        border-radius: 50%;
+        background: lighten(#8a8a8a, 20%);
+      }
+    }
+  }
+  &--error{
+    input{
+      &:checked + .radio__marker{
+        background: lighten(indianred, 30%);
+      }
+    }
+    .radio__marker{
+      background: #eceded;
+      &:after{
+        content: '';
+        display: none;
+        width: 8px;
+        height: 8px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-left: -4px;
+        margin-top: -4px;
+        border-radius: 50%;
+        background: lighten(indianred, 10%);
+      }
+    }
+  }
+}

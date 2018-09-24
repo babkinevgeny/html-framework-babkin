@@ -1,0 +1,110 @@
+
+.checkbox{
+  margin: 0;
+  position: relative;
+  width: 25px;
+  height: 25px;
+  display: inline-block;
+  margin-bottom: 12px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  float: left;
+  margin-right: 10px;
+  &:hover .checkbox__marker{
+    background: darken(#eceded, 20%);
+  }
+  &__marker{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background: #eceded;
+    &:after {
+      content: "";
+      position: absolute;
+      display: none;
+      left: 8px;
+      top: 4px;
+      width: 10px;
+      height: 15px;
+      border: solid white;
+      border-width: 0 4px 4px 0;
+      -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+      transform: rotate(45deg);
+    }
+  }
+  input{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    z-index: 1;
+    opacity: 0;
+    cursor: pointer;
+    &:checked{
+      & + .checkbox__marker{
+        background: #b2ecfd;
+        &:after{
+          display: block;
+        }
+      }
+    }
+  }
+  &--disabled{
+    &:hover{
+      .checkbox__marker{
+        background: lighten(#8a8a8a, 30%);
+      }
+    }
+    .checkbox__marker{
+      background: lighten(#8a8a8a, 30%);
+      &:after {
+        content: "";
+        position: absolute;
+        display: block;
+        left: 8px;
+        top: 4px;
+        width: 10px;
+        height: 15px;
+        border: solid lighten(#8a8a8a, 20%);
+        border-width: 0 4px 4px 0;
+        -webkit-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+        transform: rotate(45deg);
+      }
+    }
+  }
+  &--error{
+    input{
+      &:checked{
+        & + .checkbox__marker{
+          background: lighten(indianred, 30%);
+          &::after{
+            display: block;
+          }
+        }
+      }
+    }
+    .checkbox__marker{
+      &:after {
+        content: "";
+        position: absolute;
+        display: none;
+        left: 8px;
+        top: 4px;
+        width: 10px;
+        height: 15px;
+        border: solid lighten(indianred, 10%);
+        border-width: 0 4px 4px 0;
+        -webkit-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+        transform: rotate(45deg);
+      }
+    }
+  }
+}

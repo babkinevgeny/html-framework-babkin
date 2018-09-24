@@ -1,0 +1,62 @@
+.btn{
+  height: 45px;
+  padding: 10px 30px;
+  margin: 0;
+  margin-bottom: 10px;
+  display: block;
+  background: #eceded;
+  color: #000;
+  border: none;
+  outline: none;
+  text-align: center;
+  cursor: pointer;
+  &:hover{
+    background: darken(#eceded, 5%);
+  }
+  &:active{
+    background: darken(#eceded, 15%);
+  }
+  &--big{
+    font-size: 1.5em;
+    height: 60px;
+  }
+  &--small{
+    font-size: .8em;
+    height: 35px;
+  }
+  &--primary{
+    background: #b2ecfd;
+    &:hover{
+      background: darken(#b2ecfd, 5%);
+    }
+    &:active{
+      background: darken(#b2ecfd, 10%);
+    }
+  }
+  &--secondary{
+    background: #8a8a8a;
+    &:hover{
+      background: darken(#8a8a8a, 5%);
+    }
+    &:active{
+      background: darken(#8a8a8a, 10%);
+    }
+  }
+  &--disabled{
+    color: #8a8a8a;
+    background: darken(#eceded, 10%);
+    &:hover,
+    &:active{
+      background: darken(#eceded, 10%);
+    }
+  }
+  &--warning{
+    background: #FFE164;
+    &:hover{
+      background: darken(#FFE164, 5%);
+    }
+    &:active{
+      background: darken(#FFE164, 10%);
+    }
+  }
+}

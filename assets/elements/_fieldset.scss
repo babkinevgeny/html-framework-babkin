@@ -1,0 +1,48 @@
+.fieldset{
+  padding: 20px;
+  border: 1px solid #eceded;
+  margin-bottom: 30px;
+  position: relative;
+  &__block{
+    display: inline-block;
+  }
+  &:before{
+    padding: 0 10px;
+    font-size: 14px;
+    color: #8a8a8a;
+    background: #f5f8fa;
+    position: absolute;
+    top:-8px;
+    left: 20px;
+  }
+  &--inputs{
+    &:before{
+      content: 'Inputs';
+      width: 104px;
+    }
+  }
+  &--checkboxes{
+    &:before{
+      content: 'Checkboxes';
+      width: 145px;
+    }
+  }
+  &--radio{
+    &:before{
+      content: 'Radio';
+      width: 102px;
+    }
+  }
+  &--buttons{
+    &:before{
+      content: 'Buttons';
+      width: 120px;
+    }
+  }
+  &--textareas{
+    &:before{
+      content: 'Textareas';
+      width: 130px;
+    }
+  }
+}
